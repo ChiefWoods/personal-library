@@ -3,12 +3,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const multer = require('multer');
 require('dotenv').config();
 
 const apiRoutes = require('./routes/api.js');
 const fccTestingRoutes = require('./routes/fcctesting.js');
 const runner = require('./test-runner');
 
+const upload = multer();
 const app = express();
 
 app.use('/public', express.static(process.cwd() + '/public'));
@@ -17,6 +19,7 @@ app.use(cors({ origin: '*' })); //USED FOR FCC TESTING PURPOSES ONLY!
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(upload.none());
 
 //Index page (static HTML)
 app.route('/')
