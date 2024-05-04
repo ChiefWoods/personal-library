@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+main {
+  margin-inline: 25px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-block: 20px;
+}
+
+hr {
+  margin-block: 25px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input {
+  padding-inline: 2.5px;
+}
+
+ul {
+  font-size: 1.6rem;
+  text-align: start;
+}
+
+#detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 15px;
+  max-width: 500px;
+
+  & span.title {
+    font-weight: bold;
+  }
+
+  ol {
+    font-size: 1.6rem;
+    text-align: start;
+  }
+}
+
+[name="comment"] {
+  width: 250px;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 2px 5px;
+  cursor: pointer;
+}
